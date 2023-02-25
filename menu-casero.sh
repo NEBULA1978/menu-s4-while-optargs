@@ -26,14 +26,14 @@ function controlC() {
 
 function helpPanel() {
   # Mostramos un mensaje de ayuda al usuario
-  echo "Estamos dentro del panel de ayuda"
+  echo -e "\n${yellowColour}[*]${endColour}${grayColour} Uso: ./s4viPwnWifi.sh${endColour}"
   # Salimos del script con código de estado exitoso
   exit 0
 }
 
 function startAttack() {
   # Mostramos un mensaje indicando que se está iniciando el ataque
-  echo "Empezando con el ataque"
+  echo "Empezando con el ataque(atacmode=$atacmode || networkcard=$networkcard)"
 }
 
 # Main Function Principal
@@ -77,3 +77,18 @@ else
   echo -e "\n${redColour}[+] No soy root${endColour}\n"
 
 fi
+
+# Para ejecutar por consola
+
+# root@next-System:/home/next/Escritorio/menu-s4-while-optargs# ./menu-casero.sh -a hola -n hola
+# Soy root
+# Empezando con el ataque(atacmode=hola || networkcard=hola)
+# root@next-System:/home/next/Escritorio/menu-s4-while-optargs# ./menu-casero.sh -a hola -n
+# Soy root
+
+# [*] Uso: ./s4viPwnWifi.sh
+# root@next-System:/home/next/Escritorio/menu-s4-while-optargs# ./menu-casero.sh -a hola -n
+# Soy root
+
+# [*] Uso: ./s4viPwnWifi.sh
+# root@next-System:/home/next/Escritorio/menu-s4-while-optargs#
