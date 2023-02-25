@@ -48,15 +48,15 @@ if [ "$(id -u)" == "0" ]; then
   while getopts ":a:n:h" arg; do
     case $arg in
     a)
-      atacmode $OPTARG
+      atacmode="$OPTARG"
       let parameter_counter+=1
       ;;
-    # Si la opción es -a, llamamos a la función atacmode con el argumento especificado
+    # Si la opción es -a, almacenamos el argumento en la variable atacmode
     n)
-      networkcard $OPTARG
+      networkcard="$OPTARG"
       let parameter_counter+=1
       ;;
-    # Si la opción es -n, llamamos a la función networkcard con el argumento especificado
+    # Si la opción es -n, almacenamos el argumento en la variable networkcard
     h) helpPanel ;;
       # Si la opción es -h, mostramos la ayuda al usuario y salimos del script
     esac
