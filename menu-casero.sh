@@ -27,6 +27,11 @@ function controlC() {
 function helpPanel() {
   # Mostramos un mensaje de ayuda al usuario
   echo -e "\n${yellowColour}[*]${endColour}${grayColour} Uso: ./s4viPwnWifi.sh${endColour}"
+  echo -e "\n\t${purpleColour}a)${endColour}${yellowColour} Modo de ataque${endColour}"
+  echo -e "\t\t${redColour}Handshake${endColour}"
+  echo -e "\t\t${redColour}PKMID${endColour}"
+  echo -e "\t${purpleColour}n)${endColour}${yellowColour} Nombre de la tarjeta de red${endColour}"
+  echo -e "\t${purpleColour}h)${endColour}${yellowColour} Mostrar este panel de ayuda${endColour}\n"
   # Salimos del script con código de estado exitoso
   exit 0
 }
